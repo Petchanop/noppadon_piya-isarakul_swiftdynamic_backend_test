@@ -1,0 +1,15 @@
+services:
+  swiftdynamic_test:
+    container_name: swiftdynamic_backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    volumes:
+      - ..:/workspace:cached
+
+    networks:
+      - swiftdynamic_network
+
+networks:
+  swiftdynamic_network:
